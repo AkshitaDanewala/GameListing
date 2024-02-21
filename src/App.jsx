@@ -1,8 +1,16 @@
 import React from 'react'
+import Home from "./Pages/Home"
+import Header from "./Components/Header"
+
 
 const App = () => {
   return (
-    <div>App</div>
+    <div >
+
+    <Header/>
+    <Home/>
+
+    </div>
   )
 }
 
