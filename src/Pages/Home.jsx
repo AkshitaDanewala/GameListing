@@ -5,7 +5,7 @@ const Home = () => {
   return (
     <div className='grid grid-cols-4'>
 
-<div className='bg-red-200 h-full hidden md:block'>
+<div className='h-full hidden md:block px-8'>
 <GenreList/>
 
 </div>

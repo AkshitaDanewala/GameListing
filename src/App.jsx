@@ -11,9 +11,10 @@ useEffect(()=>{
 }, [])
 
   return (
+    
 <Themecontext.Provider value={{theme, setTheme}}>
 
-<div className={`${theme} ${theme == "dark" ? 'bg-[#121212]' :null}`} >
+<div className={`${theme} ${theme == "dark" ? 'bg-[#121212]' :null} min-h-[100vh]`} >
 
     <Header/>
     <Home/>
