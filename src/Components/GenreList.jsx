@@ -14,7 +14,7 @@ const GenreList = () => {
 
 const getGenreList=()=>{
     GloblApi.getGenreList.then((res)=>{
-        console.log(res.data.results)
+        // console.log(res.data.results)
         setgenreList(res.data.results)
     })
 }
