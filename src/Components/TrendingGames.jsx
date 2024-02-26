@@ -3,7 +3,7 @@ import React, { useEffect } from 'react'
 const TrendingGames = ({gameList}) => {
 
 useEffect(()=>{
-    console.log("gamelist", gameList)
+    // console.log("gamelist", gameList)
 }, [])
 
   return (
@@ -13,7 +13,7 @@ useEffect(()=>{
     <div className='md:grid  md:grid-cols-3 lg:grid-cols-4 gap-4 mt-5' >
 {gameList.map((item, index)=>index<4&&(
 
-<div className='bg-[#76a8f75e] rounded-lg p-2 group hover:scale-110 transition-all duration-300 ease-in-out cursor-pointer' >
+<div key={index} className='bg-[#76a8f75e] rounded-lg p-2 group hover:scale-110 transition-all duration-300 ease-in-out cursor-pointer' >
 <img src={item.background_image} className='h-[270px] rounded-lg object-cover' />
 <h2 className='dark:text-white text-[20px] font-bold '>{item.name}</h2>
 

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import GloblApi from '../Services/GloblApi'
 
-const GenreList = () => {
+const GenreList = ({genreId, selectedGenreName}) => {
 
   const [genreList, setgenreList] = useState([])
   const [activeIndex, setActiveIndex] = useState(0)
@@ -26,7 +26,7 @@ const getGenreList=()=>{
     {genreList.map((item, index)=>(
 
   <div key={index} 
-  onClick={()=> setActiveIndex(index) }
+  onClick={()=> {setActiveIndex(index); genreId(item.id); selectedGenreName(item.name)} }
   className={`flex gap-2 items-center mb-2 cursor-pointer hover:bg-gray-300 p-2 group  rounded-lg hover:dark:bg-gray-600 ${activeIndex == index ? "bg-gray-300 dark:bg-gray-600" :null }`}>
 
    <img src={item.image_background}  
